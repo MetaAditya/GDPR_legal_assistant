@@ -2,7 +2,7 @@
 
 
 =====Pull the code repository==========
-
+      https://github.com/MetaAditya/GDPR_legal_assistant.git
 
 ======Ollama Configuration========
    curl -fsSL https://ollama.com/install.sh | sh
@@ -42,14 +42,17 @@
       zlib1g-dev
 
    sudo apt install postgresql-server-dev-18
+
    cd /tmp
    git clone https://github.com/apache/age.git
+
    cd age
    git checkout release/PG18/1.8.0
+
    make
    sudo make install
 
-   sudo -u postgres psql -c "SELECT name, default_version FROM pg_available_extensions WHERE name = 'age';"
+   Verify--> sudo -u postgres psql -c "SELECT name, default_version FROM pg_available_extensions WHERE name = 'age';"
 
    =================Database Setup===================
 
@@ -65,11 +68,7 @@
    GRANT ALL PRIVILEGES ON DATABASE legal_memory_db TO postgres;
    GRANT ALL PRIVILEGES ON DATABASE graph_db_gdpr TO postgres;
 
-   sudo docker exec -it gdpr-backend bash
-   psql -h host.docker.internal -U postgres -d legal_memory_db
-   psql -h host.docker.internal -U postgres -d graph_db_gdpr
-
-   
+  
    CREATE EXTENSION IF NOT EXISTS vector;
    CREATE EXTENSION IF NOT EXISTS age;
 
@@ -82,6 +81,7 @@
 
    sudo docker pull quay.io/keycloak/keycloak:26.7.1
    sudo docker images
+
    sudo docker run -d \
    --name keycloak \
    --network legal-assistant-network \
@@ -107,6 +107,7 @@ conn = psycopg2.connect(
 print('PostgreSQL connection successful')
 conn.close()
    "
+
 
 =========Data Population===========
 python3 -m venv venv

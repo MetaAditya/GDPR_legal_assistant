@@ -14,8 +14,6 @@ services:
       - "host.docker.internal:host-gateway"
     networks:
       - legal-assistant-network
-    depends_on:
-      - keycloak
 
   frontend:
     build:
@@ -32,4 +30,7 @@ services:
       - legal-assistant-network
     depends_on:
       - backend
-      - keycloak
+
+networks:
+  legal-assistant-network:
+    external: true
