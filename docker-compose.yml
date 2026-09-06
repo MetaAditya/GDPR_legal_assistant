@@ -1,0 +1,35 @@
+services:
+  backend:
+    build:
+      context: ./BACKEND
+      dockerfile: Dockerfile
+    container_name: gdpr-backend
+    env_file:
+      - ./BACKEND/.env
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./BACKEND/gdpr_responses:/app/responses
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - legal-assistant-network
+    depends_on:
+      - keycloak
+
+  frontend:
+    build:
+      context: ./FRONTEND
+      dockerfile: Dockerfile
+    container_name: gdpr-frontend
+    env_file:
+      - ./FRONTEND/.env
+    ports:
+      - "9000:9000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - legal-assistant-network
+    depends_on:
+      - backend
+      - keycloak

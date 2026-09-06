@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>GDPR Compliance Assessment</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 0 30px;
+        color: #222;
+        background: #ffffff;
+      }
+
+      article {
+        width: 100%;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      h2 {
+        margin-top: 40px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #333;
+      }
+
+      h3 {
+        margin-top: 25px;
+      }
+
+      p {
+        margin: 12px 0;
+      }
+
+      .objective-analysis {
+        margin-top: 25px;
+        padding: 20px;
+        background: #f5f5f5;
+        border-left: 4px solid #333;
+      }
+
+      .objective-analysis h3 {
+        margin-top: 0;
+      }
+
+      .objective-analysis li {
+        margin-bottom: 8px;
+      }
+
+      ul {
+        padding-left: 25px;
+      }
+
+      section {
+        margin-bottom: 45px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <article>
+      <h1>GDPR Compliance Assessment</h1>
+
+      <!-- Executive Summary -->
+      <section id="executive-summary">
+        {{ data.executive_summary.description | safe }}
+
+        <div class="objective-analysis">
+          <h3>Objective Analysis</h3>
+
+          <ul>
+            {% for point in data.executive_summary.objective_analysis %}
+            <li>{{ point }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </section>
+
+      <!-- Company and GDPR Applicability -->
+      <section id="company-and-applicability">
+        {{ data.company_and_applicability.description | safe }}
+
+        <div class="objective-analysis">
+          <h3>Objective Analysis</h3>
+
+          <ul>
+            {% for point in data.company_and_applicability.objective_analysis %}
+            <li>{{ point }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </section>
+
+      <!-- Data Processing Analysis -->
+      <section id="data-processing-analysis">
+        {{ data.data_processing_analysis.description | safe }}
+
+        <div class="objective-analysis">
+          <h3>Objective Analysis</h3>
+
+          <ul>
+            {% for point in data.data_processing_analysis.objective_analysis %}
+            <li>{{ point }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </section>
+
+      <!-- Principles and Legal Basis -->
+      <section id="principles-and-legal-basis">
+        {{ data.principles_and_legal_basis.description | safe }}
+
+        <div class="objective-analysis">
+          <h3>Objective Analysis</h3>
+
+          <ul>
+            {% for point in data.principles_and_legal_basis.objective_analysis
+            %}
+            <li>{{ point }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </section>
+
+      <!-- Data Privacy and Subject's rights -->
+      <section id="data-and-subject-rights">
+        {{ data.data_subject_rights.description | safe }}
+
+        <div class="objective-analysis">
+          <h3>Objective Analysis</h3>
+
+          <ul>
+            {% for point in data.data_subject_rights.objective_analysis %}
+            <li>{{ point }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </section>
+
+      <!-- Third Parties and International Transfers -->
+      <section id="third-party-international-transfers">
+        {{ data.third_parties_and_international_transfers.description | safe }}
+
+        <div class="objective-analysis">
+          <h3>Objective Analysis</h3>
+
+          <ul>
+            {% for point in
+            data.third_parties_and_international_transfers.objective_analysis %}
+            <li>{{ point }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </section>
+
+      <!-- Data Security-->
+      <section id="data-security">
+        {{ data.security_and_breach_management.description | safe }}
+
+        <div class="objective-analysis">
+          <h3>Objective Analysis</h3>
+
+          <ul>
+            {% for point in
+            data.security_and_breach_management.objective_analysis %}
+            <li>{{ point }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </section>
+
+      <!-- DPIA , Data Protection Officer-->
+      <section id="dpia-governance">
+        {{ data.dpia_dpo_governance.description | safe }}
+
+        <div class="objective-analysis">
+          <h3>Objective Analysis</h3>
+
+          <ul>
+            {% for point in data.dpia_dpo_governance.objective_analysis %}
+            <li>{{ point }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </section>
+
+      <!-- Data Retention-->
+      <section id="data-retention">
+        {{ data.retention_and_deletion.description | safe }}
+
+        <div class="objective-analysis">
+          <h3>Objective Analysis</h3>
+
+          <ul>
+            {% for point in data.retention_and_deletion.objective_analysis %}
+            <li>{{ point }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </section>
+
+      <!-- compliance Analysis-->
+      <section id="complaince-analysis">
+        {{ data.compliance_gap_analysis.description | safe }}
+
+        <div class="objective-analysis">
+          <h3>Objective Analysis</h3>
+
+          <ul>
+            {% for point in data.compliance_gap_analysis.objective_analysis %}
+            <li>{{ point }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </section>
+
+      <!-- Remediation-->
+      <section id="remediation">
+        {{ data.remediation_roadmap.description | safe }}
+
+        <div class="objective-analysis">
+          <h3>Objective Analysis</h3>
+
+          <ul>
+            {% for point in data.remediation_roadmap.objective_analysis %}
+            <li>{{ point }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </section>
+    </article>
+  </body>
+</html>

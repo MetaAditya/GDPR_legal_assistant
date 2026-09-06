@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>GDPR Graph Visualization</title>
+
+    <!-- Cytoscape.js -->
+    <script src="https://cdn.jsdelivr.net/npm/cytoscape@3.33.1/dist/cytoscape.min.js"></script>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f5f6f8;
+      }
+
+      /* Header */
+
+      .header {
+        height: 60px;
+
+        display: flex;
+        align-items: center;
+
+        padding: 0 25px;
+
+        background: white;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .header h2 {
+        margin: 0;
+        font-size: 20px;
+      }
+
+      /* Graph area */
+
+      #cy {
+        width: 100%;
+        height: calc(100vh - 60px);
+
+        background: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <h2>Legal Knowledge Graph</h2>
+    </div>
+
+    <div id="cy"></div>
+    <script>
+      async function loadGraph() {
+        const response = await fetch("/api/graph");
+
+        const graph = await response.json();
+
+        const elements = [];
+
+        // Nodes
+        graph.nodes.forEach((node) => {
+          elements.push({
+            data: {
+              id: node.id,
+
+              label: node.properties?.name || node.properties?.title || node.id,
+
+              type: node.type,
+
+              properties: node.properties,
+            },
+          });
+        });
+
+        // Relationships
+        graph.relationships.forEach((rel) => {
+          elements.push({
+            data: {
+              id: "relationship_" + rel.id,
+
+              source: rel.source,
+
+              target: rel.target,
+
+              label: rel.type,
+
+              type: rel.type,
+            },
+          });
+        });
+
+        const cy = cytoscape({
+          container: document.getElementById("cy"),
+
+          elements: elements,
+
+          style: [
+            {
+              selector: "node",
+
+              style: {
+                "background-color": "#d96b6b",
+                label: "data(label)",
+
+                color: "#222",
+                "font-size": "20px",
+
+                "text-valign": "center",
+                "text-halign": "center",
+
+                width: "60px",
+                height: "60px",
+
+                "border-width": 2,
+                "border-color": "#b94a4a",
+              },
+            },
+
+            {
+              selector: "edge",
+
+              style: {
+                width: 2,
+
+                "line-color": "#999",
+
+                "target-arrow-color": "#999",
+                "target-arrow-shape": "triangle",
+
+                "curve-style": "bezier",
+                "font-weight": "bold",
+
+                label: "data(label)",
+
+                "font-size": "10px",
+
+                color: "#555",
+
+                "text-background-color": "white",
+                "text-background-opacity": 1,
+                "text-background-padding": "3px",
+              },
+            },
+          ],
+          layout: {
+            name: "cose",
+
+            animate: true,
+
+            // Increase spacing
+            idealEdgeLength: 180,
+
+            // Prevent nodes from getting too close
+            nodeRepulsion: 9000,
+
+            // More separation between components
+            componentSpacing: 150,
+
+            padding: 80,
+          },
+        });
+      }
+
+      loadGraph();
+    </script>
+  </body>
+</html>

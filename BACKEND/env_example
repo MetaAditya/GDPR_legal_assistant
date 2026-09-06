@@ -1,0 +1,13 @@
+API_KEY=<Your Open AI Key>
+model=gpt-4o-mini
+PG_USER=postgres
+PG_PASSWORD=postgres
+PG_PORT=5432
+PG_HOST=host.docker.internal
+PG_DB=graph_db_gdpr
+newsapi_key=dummy_key
+agent_memory_db=legal_memory_db
+LANGSMITH_API_KEY=<langsmith_API_key>
+LANGSMITH_ENDPOINT=https://api.smith.langchain.com
+LANGSMITH_PROJECT=legal_assistant_project
+LANGSMITH_TRACING=true

@@ -1,0 +1,42 @@
+Prerequisities
+1) Open AI subscription, and API key
+2) Postgres installed
+3) Ollama Installed and mxbai-embed-large embeddings downloaded
+
+
+##################The plan####################
+The Objective
+Evolution of approach
+   semantic Embedddings wont do nor does the vectorless graph
+   LLMgraph
+   Agentic Approach
+   Installtion (Schema prep and data ingestion)
+
+Scope:
+   Full stack architecture
+   Graph visualiztion
+   Streaming (Limitations)
+   Agent with memory
+   Guardrails types (Inbuilt , LLM driven)
+   Tool failure handling
+   Logging
+   Evaluation with langsmith (Reference to Prompt versioning)
+   Security=Authentication
+   Document-upload and custom chat
+   Download feature
+
+   Containerization
+      postgre changes
+      ollama changes
+      
+
+   
+
+
+######################################3########################
+
+1. Database Configuration
+   SELECT pg_terminate_backend(pid)
+FROM pg_stat_activity
+WHERE datname = 'legal_memory_db'
+  AND pid <> pg_backend_pid();
