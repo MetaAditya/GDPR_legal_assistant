@@ -1,0 +1,26 @@
+{
+    "tool": "data_retriever",
+    "tool_query": "definition of data breach under GDPR",
+    "tool_content": [
+        "TOPICS:",
+        "",
+        "Topic:gdpr",
+        "Properties:{'name': 'General Data Protection Regulation', 'impact': 'Defines how personal data is collected, processed, kept safe, compliance guaranteed, liability, and rights of citizens.', 'date_enforced': '2018-05-25'}",
+        "",
+        "Topic:data security",
+        "Properties:{'name': 'Data Security', 'details': '                \"Data protection by design and by default\",                \"Contracts\",                \"Documentation\",                \"Data protection impact assessment (DPIA)\",                \"Data breach\",                \"Ensuring compliance\",                \"Codes of conduct\",                \"Binding corporate rules\",                \"Certification\",                \"Independent supervisory authority\",           ', 'description': 'Data privacy and security are interlinked, and security must be systematically built into and implemented across the organisation.This includes:- Physical security (premises, workstations, video-surveillance cameras).- System security (internal networks, mobile equipment, servers, websites).- Organisational measures to ensure compliance with GDPR and related regulations.'}",
+        "",
+        "Topic:data breach",
+        "Properties:{'name': 'Data Breach', 'details': 'A data breach is any unlawful destruction, loss, alteration, unauthorised disclosure of, or access to personal data. Forms of breaches:- Loss of data (e.g., theft of a computer or mobile phone).- Hacking of servers or systems.- Any incident that compromises confidentiality, integrity, or availability of personal data.Controller and processor obligations:- Every breach that implies risks to personal rights and freedoms must be reported to the supervisory authority as soon as it is detected, regardless of when it occurred.- Develop and implement a security breach response plan and policy.- Employees, data subjects, processors, and the Data Protection Officer must immediately (within 72 hours) inform the controller upon detecting a breach.- The controller must assess severity and, if necessary, notify the supervisory authority and affected data subjects.- If direct notification to data subjects is impractical, a public announcement may be used.- If authorities are not notified within 72 hours, the controller must provide a reasonable justification for the delay.Notification requirements:- Specify which data were accessed.- Indicate how many people were affected.- Provide the name of the Data Protection Officer.- Outline possible consequences of the breach.- Describe measures taken to mitigate the breach.'}",
+        "",
+        "RELATIONSHIPS:",
+        "data security → comprises → data breach",
+        "",
+        "SEMANTIC DATA:",
+        "data breach a data breach is any unlawful destruction, loss, alteration, unauthorised disclosure of, or access to, personal data. it can take several forms, ranging from a loss of data (e.g.",
+        "",
+        "theft of a computer or mobile phone) to hacking of servers. under the gdpr every data breach that implies risks to personal rights and freedoms, needs to be reported to the supervisory authority, irrespective to when it took place (e.g."
+    ],
+    "timestamp": 1789309168,
+    "question_id": "28810bc5-245a-43fa-a8d9-f09cc7d25b54"
+}

@@ -1,0 +1,32 @@
+{
+    "tool": "data_retriever",
+    "tool_query": "data retention obligations under GDPR",
+    "tool_content": [
+        "TOPICS:",
+        "",
+        "Topic:gdpr",
+        "Properties:{'name': 'General Data Protection Regulation', 'impact': 'Defines how personal data is collected, processed, kept safe, compliance guaranteed, liability, and rights of citizens.', 'date_enforced': '2018-05-25'}",
+        "",
+        "Topic:lawful basis and limits to processing",
+        "Properties:{'name': 'Lawful Basis and Limits to Processing Personal Data', 'details': 'Processing of personal data must be based on one of the lawful grounds defined by GDPR. These include: Consent of the data subject, Performance of a contract, Compliance with a legal obligation, Protection of vital interests, Legitimate interests, Processing of special categories of data, Processing of data on criminal offences, and Processing in the context of employment.'}",
+        "",
+        "Topic:compliance with a legal obligation",
+        "Properties:{'name': 'Compliance with a Legal Obligation', 'details': 'Processing is lawful if necessary to comply with a legal obligation under national or EU law, and consent is not required. For example, an employer may be obliged to collect employee data for the national tax authority. In such cases, the controller must document the legal basis, and referring to an official government site explaining the obligation is considered sufficient proof.'}",
+        "",
+        "RELATIONSHIPS:",
+        "lawful basis and limits to processing → comprises → compliance with a legal obligation",
+        "",
+        "SEMANTIC DATA:",
+        "the increased responsibilities of the data pro- tection authority will also be discussed. it should be noted that all of the provisions of the gdpr still apply and that the following points should only be considered as special derogations.",
+        "",
+        "the retention period and the specific purpose of data collection need to be stated at this point as well as the rights of data subjects. the users/members need to be informed about any change in the privacy terms.",
+        "",
+        "on what grounds can he or she be held liable? the gdpr is still lacking answers to these important questions.",
+        "",
+        "documentation in case an organisation is employing more than 250 persons, or when the processing is likely to result in a risk to the rights and freedoms of the data subjects, the processing is not occasional, the processing includes special categories of data or data in relation to criminal convictions or offences, the organisation needs to document the processing activities under its responsibility. while it is best for the data controller to document all the processing activities, safe- guard mechanisms, records of consent and location of data etc., the gdpr only pro- vides for some obligations which can be consulted in article 30 of the regulation.",
+        "",
+        "individual rights of data subjects the gdpr provides eight clear individual rights which data subjects exercise and which controllers have to respect. 1."
+    ],
+    "timestamp": 1789309126,
+    "question_id": "3acc0cc8-2af7-491e-85a3-2f769147a5b6"
+}
